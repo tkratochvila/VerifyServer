@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oslc4j_tc:Toolchain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oslc4j_ai="http://org.eclipse.lyo/oslc4j/adaptorInterface" xmlns:oslc4j_tc="http://org.eclipse.lyo/oslc4j/toolChain">
+  <adaptorInterfaces name="Adapter" javaClassBaseNamespace="hon.oslc.automation" javaFilesBasePath="../adapter/src/main/java/" jspFilesBasePath="../adapter/src/main/webapp/" javascriptFilesBasePath="../adapter/src/main/webapp/">
+    <serviceProviderCatalog title="Service Provider Catalog" description="Service Provider Catalog">
+      <serviceProviders title="Service Provider" description="Service Provider">
+        <services>
+          <domainSpecification href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12"/>
+          <creationFactories title="AutoPlanCreationFactory" label="AutoPlanCreationFactory" creationURI="createAutoPlan">
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.0"/>
+          </creationFactories>
+          <creationFactories title="AutoReqCreationFactory" label="AutoReqCreationFactory" creationURI="createAutoReq">
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.1"/>
+          </creationFactories>
+          <queryCapabilities title="AutoPlanQueryCapability" label="AutoPlanQueryCapability" queryBaseURI="queryAutoPlan">
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.0"/>
+          </queryCapabilities>
+          <basicCapabilities>
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.0"/>
+          </basicCapabilities>
+          <basicCapabilities>
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.1"/>
+          </basicCapabilities>
+          <basicCapabilities>
+            <resourceTypes href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.12/@resources.3"/>
+          </basicCapabilities>
+        </services>
+      </serviceProviders>
+    </serviceProviderCatalog>
+    <specification/>
+    <requiredAdaptors xsi:type="oslc4j_ai:GenericRequiredAdaptor" serviceProviderCatalogURI="http://your.host.com/adaptor/services/catalog/singleton" name="GenericRequiredAdaptor"/>
+  </adaptorInterfaces>
+  <specification>
+    <domainSpecifications name="ForReq" namespaceURI="http://hon.oslc.automation/ns/for_req#" namespacePrefix="//@specification/@domainPrefixes.0">
+      <resources name="Output">
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.0/@resourceProperties.8"/>
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.0/@resourceProperties.3"/>
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.0/@resourceProperties.2"/>
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.2/@resourceProperties.1"/>
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.2/@resourceProperties.0"/>
+      </resources>
+      <resourceProperties name="timeSpent" occurs="zeroOrOne" valueType="String" description="Time spent on each requirement in seconds"/>
+      <resourceProperties name="verifyServerResponse" valueType="String"/>
+    </domainSpecifications>
+    <domainSpecifications name="Estimation and Measurement" namespaceURI="http://open-services.net/ns/ems#" namespacePrefix="//@specification/@domainPrefixes.1">
+      <resources name="Measure">
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.0/@resourceProperties.8"/>
+        <resourceProperties href="#//@specification/@domainSpecifications.1/@resourceProperties.0"/>
+        <resourceProperties href="#//@specification/@domainSpecifications.1/@resourceProperties.2"/>
+        <resourceProperties href="#//@specification/@domainSpecifications.1/@resourceProperties.1"/>
+        <resourceProperties href="../org.eclipse.lyo.tools.domainmodels/oslcDomainSpecifications.xml#//@domainSpecifications.2/@resourceProperties.0"/>
+      </resources>
+      <resourceProperties name="metric" valueType="Resource" representation="reference" description="A URI that identifies the metric."/>
+      <resourceProperties name="unitOfMeasure" valueType="Resource" representation="reference" description="A URI that identifies the unit of measure."/>
+      <resourceProperties name="numericValue" valueType="XMLLiteral" description="The numeric value of the measure."/>
+    </domainSpecifications>
+    <domainPrefixes name="for_req"/>
+    <domainPrefixes name="ems"/>
+  </specification>
+  <vocabularies/>
+</oslc4j_tc:Toolchain>

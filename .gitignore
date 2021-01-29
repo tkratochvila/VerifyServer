@@ -1,0 +1,6 @@
+/.metadata/
+.recommenders/
+adapter/target/
+lyo.domains
+*.lost
+examples
