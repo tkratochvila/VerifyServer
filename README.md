@@ -15,6 +15,12 @@ Normal run:
 $ cd adapter
 $ mvn jetty:run-exploded
 ```
+
+# Verfication Server 
+- authors: Petr Bauch, Michal Dobes jr. and Tomas Kratochvila 
+- project: AUFOVER
+- description: OSLC Verification Server based on Proxygen by Honeywell. Need to run on linux due to dependencies with formal verification tools installed and server ports opened.
+
 # Full deployment 
 - Install DIVINE at least version 4.4 from: https://divine.fi.muni.cz/ 
 - Install Symbiotic at least version 8 from: https://github.com/staticafi/symbiotic 
