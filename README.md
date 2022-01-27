@@ -15,6 +15,15 @@ Normal run:
 $ cd adapter
 $ mvn jetty:run-exploded
 ```
+# Full deployment 
+- Install DIVINE at least version 4.4 from: https://divine.fi.muni.cz/ 
+- Install Symbiotic at least version 8 from: https://github.com/staticafi/symbiotic 
+- Install Spectra: https://pajda.fit.vutbr.cz/testos/spectra
+- Install ANaConDA: https://pajda.fit.vutbr.cz/anaconda/anaconda
+- Optionaly install also CPACheck, cmbc, Infer or formal verification tools SW verification.
+- Set all paths to all tools in the configuration.
+
+![The integration of complete verification platform as deployed in Honeywell for both testing and production servers](https://github.com/tkratochvila/VerifyAll/blob/main/WebApp/Imgs/AUFOVER-Security.png?raw=true)
 
 # How to configure
 Use the adapter/adapter.properties file.
