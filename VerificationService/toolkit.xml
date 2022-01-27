@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ToolKit>
+  <tool name="z3" path="/var/www/z3" output_parser="toolAdapters/outputParsers/dummy.sh" single_instance="false">
+    <category name="RequirementAnalysis" />
+  </tool>
+  <tool name="DIVINE" path="divine" output_parser="toolAdapters/outputParsers/divine4.sh" single_instance="true">
+    <category name="CorrectnessChecking" />
+  </tool>
+  <tool name="Symbiotic" path="symbiotic" output_parser="toolAdapters/outputParsers/symbiotic.sh" single_instance="true">
+    <category name="CorrectnessChecking" />
+  </tool>
+  <tool name="Testos" path="testos" single_instance="true">
+    <category name="CorrectnessChecking" />
+  </tool>
+  <tool name="cbmc" path="cbmc" single_instance="true">
+    <category name="CorrectnessChecking" />
+  </tool>
+  <tool name="CPAchecker" path="CPAchecker" single_instance="true">
+    <category name="CorrectnessChecking" />
+  </tool>
+  <tool name="remus2" path="/var/www/sanityChecker" output_parser="toolAdapters/outputParsers/dummy.sh"  single_instance="false">
+    <category name="RequirementAnalysis" />
+  </tool>
+</ToolKit>
