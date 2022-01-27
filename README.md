@@ -2,7 +2,7 @@
 # OSLC Automation Adapter
 - author: Ondrej Vasicek
 - project: AUFOVER
-- description: OSLC Verification Server based on LYO client developed by Ondrej Vasicek for Honeywell.
+- description: OSLC Verification Server based on LYO client developed by Ondrej Vasicek from Honeywell. Need to run on linux server with formal verification tools installed and server ports opened.
 
 # How to build and run
 First run or clean run:
